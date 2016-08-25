@@ -1,3 +1,5 @@
+package nqueens;
+
 class nqueens {
 	int[] sol;
 	int used;
@@ -60,7 +62,10 @@ class nqueens {
 	public static void main(String[] args) {
 		nqueens nq = new nqueens();
 
-		System.out.println("args len: " + args.length);
+		if (args.length < 1) {
+			System.err.println("Usage: java nqueens <board-size>");
+			return;
+		}
 
 		int len = Integer.parseInt(args[0]);
 
